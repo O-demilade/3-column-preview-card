@@ -1,0 +1,109 @@
+/* Background Colors Class */
+.orange-bg {
+    background-color: hsl(31, 77%, 52%);
+}
+.darkCyan-bg{
+    background-color: hsl(184, 100%, 22%);
+}
+.vDarkCyan-bg{
+    background-color: hsl(179, 100%, 13%);
+}
+.white-bg{
+    background-color: white;
+}
+
+/* Colors Class*/
+.orange {
+    color: hsl(31, 77%, 52%);
+}
+.darkCyan{
+    color: hsl(184, 100%, 22%);
+}
+.vDarkCyan{
+    color: hsl(179, 100%, 13%);
+}
+/* the body outlay */
+
+/* the containers */
+.container{
+    display: grid;
+    grid-template-rows: auto auto auto;
+}
+.container{
+    margin: 0 30px 0 30px;
+    padding-top: 100px;
+    color: white;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: medium;
+}
+.in-container{
+    padding: 40px;
+}
+.in-container h1{
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    padding-top: 10px;
+}
+/*buttons*/
+.butn{
+    margin-top: 30px;
+    border-radius: 30px;
+    border-color: transparent;
+    padding: 15px 30px 15px 30px;
+}
+
+/* distinct container properties*/
+#sedan{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#luxury{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+
+/* media query for mobile*/
+@media screen and (max-width: 375px){
+
+}
+/* media query for any screen other than mobile*/
+@media screen and (min-width: 376px) {
+    /* remove mobile view grid div.container*/
+    div.container::before, div.container::after {
+        content: none;
+    }
+    div.container{
+    }
+    .container {
+        margin: 0 20% 0 20%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+    .in-container {
+    }
+    #sedan {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0;
+    }
+
+    #luxury {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    /* change the button outlook when active*/
+    .butn:focus{
+        border: solid white 3px;
+        background-color: transparent;
+        color: white;
+        outline: dotted yellow 1px;
+    }
+    .butn:hover{
+        cursor: pointer;
+    }
+}
