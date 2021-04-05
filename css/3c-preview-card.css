@@ -97,7 +97,7 @@
         border-top-right-radius: 10px;
     }
     /* change the button outlook when active*/
-    .butn:focus{
+    .butn:focus, .butn:hover{
         border: solid white 3px;
         background-color: transparent;
         color: white;
